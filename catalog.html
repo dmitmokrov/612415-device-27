@@ -23,7 +23,17 @@
         <a href="#">Сравнить</a>
         <a href="card.html">Корзина</a>
         <ul>
-          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li>
+            <a href="catalog.html">Каталог товаров</a>
+            <ul>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="warranty.html">Гарантия</a></li>
           <li><a href="contacts.html">Контакты</a></li>
@@ -38,14 +48,73 @@
         <li>Моноподы для селфи</li>
       </ul>
       <section>
-        <!-- Фильтр 
         <h2>Фильтр:</h2>
-        <form></form>
-        -->
+        <form>
+          <fieldset>
+            <legend>Стоимость</legend>
+            <!-- Блок с двумя бегунками -->
+          </fieldset>
+          <fieldset>
+            <legend>Цвет</legend>
+            <p>
+              <label>
+                <input type="checkbox" name="color" checked>
+                Черный
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color">
+                Белый
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color" checked>
+                Синий
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color" checked>
+                Красный
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" name="color">
+                Розовый
+              </label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <p>
+              <label>
+                <input type="radio" name="bluetooth" checked>
+                Есть
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" name="bluetooth">
+                Нет
+              </label>
+            </p>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
-        <!-- Сортировка -->
         <h2 class="visually-hidden">Список моноподов для селфи</h2>
+        <p>
+          Сортировка: 
+          <button type="button">По цене</button>
+          <button type="button">По типу</button>
+          <button type="button">По популярности</button>
+          <button type="button">По возрастанию</button>
+          <button type="button">По убыванию</button>
+        </p>
         <ul>
           <li>
             <h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
@@ -68,6 +137,13 @@
             <span>4900 руб.</span>
           </li>
         </ul>
+        <ol>
+          <li><a>1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+        </ol>
+        <button>Назад</button>
+        <button>Вперед</button>
       </section>
     </main>
     <footer>
