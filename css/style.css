@@ -84,6 +84,10 @@ body {
 
 /* Стили шапки */
 
+.header {
+  background-color: rgba(240, 197, 45, 0.5);
+}
+
 .nav-search input {
   font: inherit;
 
