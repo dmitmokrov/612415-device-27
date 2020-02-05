@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин «Device»</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav">
         <a>
           <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
         </a>
-        <form>
-          <input type="search">
+        <form class="nav-search">
+          <input type="search" placeholder="Поиск по сайту">
           <button type="submit">Поиск</button>
         </form>
         <ul>
@@ -21,7 +23,7 @@
         <a href="card.html">Корзина</a>
         <ul>
           <li>
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="nav-link" href="catalog.html">Каталог товаров</a>
             <ul>
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -31,9 +33,9 @@
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="warranty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><a class="nav-link" href="delivery.html">Доставка</a></li>
+          <li><a class="nav-link" href="warranty.html">Гарантия</a></li>
+          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -132,16 +134,16 @@
         </ul>
         <ul>
           <li>
-            <h3>Доставка</h3>
+            <h3 class="heading">Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
           <li>
-            <h3>Гарантия</h3>
+            <h3 class="heading">Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.</p>
           </li>
           <li>
-            <h3>Кредит</h3>
+            <h3 class="heading">Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
           </li>
         </ul>
@@ -155,28 +157,30 @@
           <li><img src="img/logo-4.png" width="260" height="100" alt="Логотип Vive"></li>
         </ul>
       </section>
-      <section>
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+      <section class="about-us">
+        <h2 class="heading">О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика,<br>
+        который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки<br>
+        России! DEVICE работает со многими транспортными компаниями:</p>
         <ul>
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="about.html">Подробнее о нас</a>
+        <a class="button" href="about.html">Подробнее о нас</a>
       </section>
       <section>
-        <h2>Контакты</h2>
+        <h2 class="heading">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <a href="map.html">
           <img src="img/map.png" width="560" height="222" alt="Как до нас добраться">
         </a>
-        <a href="contact-us.html">Напишите нам</a>
+        <a class="button" href="contact-us.html">Напишите нам</a>
       </section>
     </main>
-    <footer>
-      <a>
+    <footer class="footer">
+      <a class="footer-hover">
         <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
       </a>
       <ul>
@@ -186,17 +190,17 @@
       <a href="card.html">Корзина</a>
       <p>г. Москва, ул. Строителей, 15</p>
       <ul>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="warranty.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a class="footer-link footer-hover" href="delivery.html">Доставка</a></li>
+        <li><a class="footer-link footer-hover" href="warranty.html">Гарантия</a></li>
+        <li><a class="footer-link footer-hover" href="contacts.html">Контакты</a></li>
       </ul>
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li><a class="footer-social-hover" href="#">Facebook</a></li>
+        <li><a class="footer-social-hover" href="#">Instagram</a></li>
+        <li><a class="footer-social-hover" href="#">Twitter</a></li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <a class="footer-hover" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </footer>
     <section>
       <h2 class="visually-hidden">Напишите нам</h2>

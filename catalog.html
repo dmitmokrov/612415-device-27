@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин «Device»</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav">
         <a href="index.html">
           <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
         </a>
-        <form>
-          <input type="search">
+        <form class="nav-search">
+          <input type="search" placeholder="Поиск по сайту">
           <button type="submit">Поиск</button>
         </form>
         <ul>
@@ -22,7 +24,7 @@
         <a href="card.html">Корзина</a>
         <ul>
           <li>
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="nav-link" href="catalog.html">Каталог товаров</a>
             <ul>
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -32,15 +34,15 @@
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="warranty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><a class="nav-link" href="delivery.html">Доставка</a></li>
+          <li><a class="nav-link" href="warranty.html">Гарантия</a></li>
+          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Моноподы для селфи</h1>
-      <ul>
+      <h1 class="heading">Моноподы для селфи</h1>
+      <ul class="breadcrumb">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог товаров</a></li>
         <li>Моноподы для селфи</li>
@@ -105,7 +107,7 @@
           <button type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="products">
         <h2 class="visually-hidden">Список моноподов для селфи</h2>
         <p>
           Сортировка: 
@@ -115,26 +117,26 @@
           <a>По возрастанию</a>
           <a>По убыванию</a>
         </p>
-        <ul>
+        <ul class="products-list">
           <li>
-            <h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
+            <h3 class="product-heading"><a href="catalog-item.html">Любительская селфи-палка</a></h3 c>
             <img src="img/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <span>500 руб.</span>
+            <span class="product-price">500 руб.</span>
           </li>
           <li>
-            <h3><a href="catalog-item.html">Профессиональная селфи-палка</a></h3>
+            <h3 class="product-heading"><a href="catalog-item.html">Профессиональная<br>селфи-палка</a></h3>
             <img src="img/product-2.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <span>1500 руб.</span>
+            <span class="product-price">1500 руб.</span>
           </li>
           <li>
-            <h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
+            <h3 class="product-heading"><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
             <img src="img/product-3.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <span>2500 руб.</span>
+            <span class="product-price">2500 руб.</span>
           </li>
           <li>
-            <h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
+            <h3 class="product-heading"><a href="catalog-item.html">Селфи-палка «Следуй за<br>мной»</a></h3>
             <img src="img/product-4.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <span>4900 руб.</span>
+            <span class="product-price">4900 руб.</span>
           </li>
         </ul>
         <ul>
@@ -146,8 +148,8 @@
         </ul>
       </section>
     </main>
-    <footer>
-      <a>
+    <footer class="footer">
+      <a class="footer-hover">
         <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
       </a>
       <ul>
@@ -158,17 +160,17 @@
       <a href="card.html">Корзина</a>
       <p>г. Москва, ул. Строителей, 15</p>
       <ul>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="warranty.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a class="footer-link footer-hover" href="delivery.html">Доставка</a></li>
+        <li><a class="footer-link footer-hover" href="warranty.html">Гарантия</a></li>
+        <li><a class="footer-link footer-hover" href="contacts.html">Контакты</a></li>
       </ul>
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li><a class="footer-social-hover" href="#">Facebook</a></li>
+        <li><a class="footer-social-hover" href="#">Instagram</a></li>
+        <li><a class="footer-social-hover" href="#">Twitter</a></li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <a class="footer-hover" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </footer>
   </body>
 </html>
