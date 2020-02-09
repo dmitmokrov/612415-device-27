@@ -82,27 +82,96 @@ body {
   background-color: transparent;
 }
 
+.lined {
+  outline: 1px solid blue;
+}
+
 /* Стили шапки */
 
-.header {
+.nav {
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding: 50px 60px;
+
   background-color: rgba(240, 197, 45, 0.5);
 }
 
-.nav-search input {
+.nav-columns {
+  display: flex;
+}
+
+.nav-columns a {
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.nav-search {
+  flex-basis: 440px;
+  display: flex;
+  margin-right: 100px;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 36px;
+  border: none;
+  border-bottom: 2px solid transparent;
+
   font: inherit;
+  color: #000000;
 
-  opacity: 0.3;
+  background-color: transparent;
 }
 
-.nav-search input:hover {
-  opacity: 0.6;
+.search-input::placeholder {
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.nav-search input:focus {
+.search-input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-input:focus::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search-input:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+.search-button {
+  padding: 16px 18px;
+  border: 2px solid #000000;
+
+  background-color: transparent;
+  opacity: 0;
+}
+
+.search-input:focus + .search-button {
+  opacity: 1;
+}
+
+.search-button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.search-button:focus,
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+  outline: none;
   opacity: 1;
 }
 
 .nav ul {
+  margin: 0;
   list-style: none;
 }
 
@@ -117,6 +186,20 @@ body {
 
 .nav a:active {
   opacity: 0.3;
+}
+
+.nav-login {
+  display: flex;
+  margin-right: auto;
+}
+
+.nav-login li {
+  display: flex;
+}
+
+.nav-column-right {
+  display: flex;
+  margin-left: auto;
 }
 
 .nav-link {

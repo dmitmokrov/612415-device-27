@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
+    <header>
       <nav class="nav">
         <a>
           <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
         </a>
-        <form class="nav-search">
-          <input type="search" placeholder="Поиск по сайту">
-          <button type="submit">Поиск</button>
-        </form>
-        <ul>
-          <li><a href="login.html">Войти</a></li>
-        </ul>
-        <a href="#">Сравнить</a>
-        <a href="card.html">Корзина</a>
+        <div class="nav-columns">
+          <form class="nav-search">
+            <input class="search-input" type="search" placeholder="Поиск по сайту">
+            <button class="search-button" type="submit">Поиск</button>
+          </form>
+          <ul class="nav-login">
+            <li><a href="login.html">Войти</a></li>
+          </ul>
+          <div class="nav-column-right">
+            <a href="#">Сравнить</a>
+            <a href="card.html">Корзина</a>
+          </div>
+        </div>
         <ul>
           <li>
             <a class="nav-link" href="catalog.html">Каталог товаров</a>
