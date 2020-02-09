@@ -128,6 +128,67 @@ body {
   letter-spacing: 3.6px;
 }
 
+/* Раздел "Лучшие предложения" */
+
+.slider-slogan {
+  line-height: 56px;
+}
+
+.slider-desc {
+  letter-spacing: 0.15px;
+}
+
+.slider-table {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+}
+
+.slider-table-cell {
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  letter-spacing: 0.36px;
+  color: #000000;
+}
+
+/* Раздел "Категории товаров" */
+
+.category-list {
+  list-style: none;
+}
+
+.category-list li {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  letter-spacing: 0.18px;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.category-list a:active {
+  opacity: 0.3;
+}
+
+/* Раздел "Сервисы" */
+
+.services-controls {
+  list-style: none;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-list p {
+  letter-spacing: 0.15px;
+}
+
 /* Раздел "О нас"  */
 
 .about-us li {
@@ -219,6 +280,68 @@ body {
   color: rgba(0, 0, 0, 0.1);
 }
 
+/* Раздел "Фильтры" */
+
+.filter-heading {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter-form legend {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  letter-spacing: 0.18px;
+  color: #000000;
+}
+
+.filter-form label {
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+  color: #000000;
+}
+
+/* Раздел "Продукты" */
+
+.products-sorting {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.products-sorting a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.products-sorting a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.products-sorting a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.products-sorting a.active {
+  color: #000000;
+}
+
 .products-list {
   list-style: none;
 }
@@ -240,4 +363,27 @@ body {
   line-height: 24px;
   font-family: "Gilroy", "Arial", sans-serif;
   letter-spacing: 0.16px;
+}
+
+.pagination {
+  list-style: none;
+}
+
+.pagination a {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination a.active,
+.pagination a.control {
+  color: #000000;
+}
+
+.pagination a.control:active {
+  color: rgba(0, 0, 0, 0.3);
 }
