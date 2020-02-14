@@ -34,14 +34,14 @@
 
 /* Глобальные стили */
 
-html { 
-  box-sizing: border-box; 
+html {
+  box-sizing: border-box;
 }
 
-*, 
-*::before, 
-*::after { 
-  box-sizing: inherit; 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -58,6 +58,17 @@ body {
 }
 
 /* Общие стили */
+
+.container {
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
 
 .heading {
   font-weight: 800;
@@ -89,9 +100,6 @@ body {
 /* Стили шапки */
 
 .nav {
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 40px;
   padding: 50px 60px;
 
@@ -102,15 +110,9 @@ body {
   display: flex;
 }
 
-.nav-columns a {
-  padding-left: 27px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
 .nav-search {
-  flex-basis: 440px;
   display: flex;
+  width: 440px;
   margin-right: 100px;
 }
 
@@ -170,11 +172,6 @@ body {
   opacity: 1;
 }
 
-.nav ul {
-  margin: 0;
-  list-style: none;
-}
-
 .nav a {
   text-decoration: none;
   color: #000000;
@@ -190,16 +187,63 @@ body {
 
 .nav-login {
   display: flex;
-  margin-right: auto;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .nav-login li {
   display: flex;
+  align-items: center;
+}
+
+.nav-login a {
+  padding-left: 25px;
 }
 
 .nav-column-right {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
   margin-left: auto;
+}
+
+.nav-column-right a {
+  padding-left: 25px;
+}
+
+.nav-menu-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-menu-catalog {
+  width: 300px;
+  margin-right: 240px;
+}
+
+.nav-menu-delivery {
+  margin-right: 30px;
+}
+
+.nav-menu-item {
+  width: 120px;
+}
+
+.nav-menu-contacts {
+  margin-left: auto;
+}
+
+.nav-submenu-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .nav-link {
@@ -272,7 +316,17 @@ body {
   letter-spacing: 0.15px;
 }
 
+/* Раздел "Производители" */
+
+.fabricators-list {
+  list-style: none;
+}
+
 /* Раздел "О нас"  */
+
+.about-us {
+  width: 460px;
+}
 
 .about-us li {
   font-weight: 800;
@@ -282,13 +336,89 @@ body {
   color: #000000;
 }
 
+/* Раздел "Контакты" */
+
+.contacts {
+  width: 560px;
+}
+
 /* Стили футера */
 
 .footer {
   background-color: #464646;
 }
 
-.footer ul {
+.footer-container {
+  padding: 60px 0;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu > a {
+  margin-left: 40px;
+  padding-left: 25px;
+}
+
+.footer-logo {
+  height: 35px;
+}
+
+.footer-login {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-login a {
+  display: block;
+  padding-left: 25px;
+}
+
+.footer-info {
+  display: flex;
+  margin-top: 35px;
+
+  color: #ffffff;
+}
+
+.footer-address {
+  margin: 0;
+  margin-right: 160px;
+  padding: 0;
+}
+
+.footer-links-list {
+  display: flex;
+  justify-content: space-between;
+  width: 440px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-tel {
+  margin-left: auto;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 60px;
+}
+
+.footer-social-list {
+  display: flex;
+  width: 160px;
+  margin: 0;
+  margin-right: 470px;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -341,29 +471,47 @@ body {
 }
 
 /* Страница каталога */
+.catalog-wrapper {
+  padding-left: 60px;
+}
 
-.breadcrumb {
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.14px;
-  color: rgba(0, 0, 0, 0.3);
   list-style: none;
 }
 
-.breadcrumb a {
+.breadcrumbs-item a {
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.breadcrumb a:hover {
+.breadcrumbs-item a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.breadcrumb a:active {
+.breadcrumbs-item a:active {
   color: rgba(0, 0, 0, 0.1);
 }
 
+.breadcrumbs-item-current {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Раздел "Фильтры" */
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 330px;
+}
 
 .filter-heading {
   font-weight: 800;
@@ -373,6 +521,10 @@ body {
   letter-spacing: 3.2px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.filter-form fieldset {
+  border: none;
 }
 
 .filter-form legend {
@@ -392,6 +544,10 @@ body {
 }
 
 /* Раздел "Продукты" */
+
+.products {
+  width: 760px;
+}
 
 .products-sorting {
   font-weight: 800;
@@ -426,10 +582,38 @@ body {
 }
 
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.products-item {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin-bottom: 45px;
+}
+
+.products-item:nth-child(2n) {
+  margin-left: auto;
+}
+
+.products-item img {
+  order: -1;
+}
+
+.products-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
 .product-heading {
+  margin: 0;
+  padding: 0;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
