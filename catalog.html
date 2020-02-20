@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
+  <body class="inner-page">
+    <header class="header">
       <nav class="nav container">
-        <a href="index.html">
+        <a class="header-logo" href="index.html">
           <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
         </a>
         <div class="nav-columns">
@@ -18,24 +18,24 @@
             <button class="search-button" type="submit">Поиск</button>
           </form>
           <ul class="nav-login">
-            <li><a href="profile.html">Валентин Петухов</a></li>
-            <li><a href="logout.html">Выйти</a></li>
+            <li><a class="nav-login-link" href="profile.html">Валентин Петухов</a></li>
+            <li><a class="nav-logout-link" href="logout.html">Выйти</a></li>
           </ul>
           <div class="nav-column-right">
-            <a href="#">Сравнить</a>
-            <a href="card.html">Корзина</a>
+            <a class="compare" href="#">Сравнить</a>
+            <a class="cart" href="card.html">Корзина</a>
           </div>
         </div>
         <ul class="nav-menu-list nav-columns">
           <li class="nav-menu-catalog">
-            <a class="nav-link" href="catalog.html">Каталог товаров</a>
+            <a class="nav-link nav-link-catalog" href="catalog.html">Каталог товаров</a>
             <ul class="nav-submenu-list">
               <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
               <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
               <li><a href="#">Квадрокоптеры</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li class="wrap-next"><a href="#">Умные часы</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
             </ul>
           </li>
           <li class="nav-menu-item nav-menu-delivery"><a class="nav-link" href="delivery.html">Доставка</a></li>
@@ -65,50 +65,36 @@
               <legend>Цвет</legend>
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" name="color" checked>
-                    Черный
-                  </label>
+                  <input class="visually-hidden" type="checkbox" id="color-black" name="color" value="black" checked>
+                  <label class="checkbox-label" for="color-black">Черный</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="color">
-                    Белый
-                  </label>
+                  <input class="visually-hidden" type="checkbox" id="color-white" name="color" value="white">
+                  <label class="checkbox-label" for="color-white">Белый</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="color" checked>
-                    Синий
-                  </label>
+                  <input class="visually-hidden" type="checkbox" id="color-blue" name="color" value="blue" checked>
+                  <label class="checkbox-label" for="color-blue">Синий</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="color" checked>
-                    Красный
-                  </label>
+                  <input class="visually-hidden" type="checkbox" id="color-red" name="color" value="red" checked>
+                  <label class="checkbox-label" for="color-red">Красный</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="color">
-                    Розовый
-                  </label>
+                  <input class="visually-hidden" type="checkbox" id="color-pink" name="color" value="pink">
+                  <label class="checkbox-label" for="color-pink">Розовый</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset>
               <legend>Bluetooth</legend>
               <p>
-                <label>
-                  <input type="radio" name="bluetooth" checked>
-                  Есть
-                </label>
+                <input class="visually-hidden" type="radio" id="bluetooth-yes" name="bluetooth" checked>
+                <label class="radio-label" for="bluetooth-yes">Есть</label>
               </p>
               <p>
-                <label>
-                  <input type="radio" name="bluetooth">
-                  Нет
-                </label>
+                <input class="visually-hidden" type="radio" id="bluetooth-no" name="bluetooth">
+                <label class="radio-label" for="bluetooth-no">Нет</label>
               </p>
             </fieldset>
             <button class="button" type="submit">Показать</button>
@@ -168,34 +154,34 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="flex-container">
-          <a class="footer-logo footer-hover" href="index.html">
-            <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина «Device»">
+          <a class="footer-logo" href="index.html">
+            <img src="img/logo-footer.svg" width="163" height="35" alt="Логотип магазина «Device»">
           </a>
           <div class="footer-menu">
-            <ul class="footer-login">
-              <li><a href="profile.html">Валентин Петухов</a></li>
-              <li><a href="logout.html">Выйти</a></li>
+            <ul class="footer-login-list">
+              <li><a class="footer-menu-link login-footer" href="profile.html"><span>Валентин Петухов</span></a></li>
+              <li><a class="footer-logout-link" href="logout.html">Выйти</a></li>
             </ul>
-            <a href="#">Сравнить</a>
-            <a href="card.html">Корзина</a>
+            <a class="footer-menu-link compare-footer" href="#"><span>Сравнить</span></a>
+            <a class="footer-menu-link cart-footer" href="cart.html"><span>Корзина</span></a>
           </div>
         </div>
         <div class="footer-info">
           <p class="footer-address">г. Москва, ул. Строителей, 15</p>
           <ul class="footer-links-list">
-            <li><a class="footer-link footer-hover" href="delivery.html">Доставка</a></li>
-            <li><a class="footer-link footer-hover" href="warranty.html">Гарантия</a></li>
-            <li><a class="footer-link footer-hover" href="contacts.html">Контакты</a></li>
+            <li><a class="footer-link" href="delivery.html">Доставка</a></li>
+            <li><a class="footer-link" href="warranty.html">Гарантия</a></li>
+            <li><a class="footer-link" href="contacts.html">Контакты</a></li>
           </ul>
           <a class="footer-tel" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         </div>
         <div class="footer-social">
           <ul class="footer-social-list">
-            <li><a class="footer-social-hover" href="#">Facebook</a></li>
-            <li><a class="footer-social-hover" href="#">Instagram</a></li>
-            <li><a class="footer-social-hover" href="#">Twitter</a></li>
+            <li><a class="footer-social-link footer-social-facebook" href="#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="footer-social-link footer-social-instagram" href="#"><span class="visually-hidden">Instagram</span></a></li>
+            <li><a class="footer-social-link footer-social-twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
           </ul>
-          <a class="footer-hover" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="academy-link" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">HTML Academy</span></a>
         </div>
       </div>
     </footer>
