@@ -45,10 +45,10 @@
     </header>
     <main>
       <h1 class="visually-hidden">Магазин «Device»</h1>
-      <section class="container">
+      <section class="best-offers container">
         <h2 class="visually-hidden">Лучшие предложения</h2>
         <ul class="best-offers-list">
-          <li class="best-offer">
+          <li class="best-offer best-offer-selfie-stick active">
             <div class="best-offer-info">
               <h3 class="visually-hidden">Селфи-палка</h3>
               <b class="heading slider-slogan">Делай селфи,<br>
@@ -69,11 +69,11 @@
                 </tr>
               </table>
             </div>
-            <div class="best-offer-image">
+            <div class="best-offer-image selfie-stick">
               <img src="img/slider-1.png" width="384" height="486" alt="Изображение селфи-палки">
             </div>
           </li>
-          <li class="best-offer">
+          <li class="best-offer best-offer-fitness-bracelet">
             <div class="best-offer-info">
               <h3 class="visually-hidden">Фитнес-браслет</h3>
               <b class="heading slider-slogan">Худеем<br>
@@ -90,11 +90,11 @@
                 </tr>
               </table>
             </div>
-            <div class="best-offer-image">
+            <div class="best-offer-image fitness-bracelet">
               <img src="img/slider-2.png" width="345" height="485" alt="Изображение фитнес-браслета">
             </div>
           </li>
-          <li class="best-offer">
+          <li class="best-offer best-offer-quadcopter">
             <div class="best-offer-info">
               <h3 class="visually-hidden">Квадрокоптер</h3>
               <b class="heading slider-slogan">Порхает как бабочка,<br>
@@ -113,66 +113,68 @@
                 </tr>
               </table>
             </div>
-            <div class="best-offer-image">
+            <div class="best-offer-image quadcopter">
               <img src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
             </div>
           </li>
         </ul>
         <ul class="best-offers-controls">
-          <li><button type="button">Перейти к первому слайду</button></li>
-          <li><button type="button">Перейти ко второму слайду</button></li>
-          <li><button type="button">Перейти к третьему слайду</button></li>
+          <li><button class="slider-button active" type="button"><span class="visually-hidden">Перейти к первому слайду</span></button></li>
+          <li><button class="slider-button" type="button"><span class="visually-hidden">Перейти ко второму слайду</span></button></li>
+          <li><button class="slider-button" type="button"><span class="visually-hidden">Перейти к третьему слайду</span></button></li>
         </ul>
       </section>
       <section class="categories container">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="category-list">
-          <li class="category-item">
+          <li class="category-item category-virtual">
             <a href="#">Виртуальная<br>
             реальность</a>
           </li>
-          <li class="category-item">
+          <li class="category-item category-monopods">
             <a href="#">Моноподы<br>
             для селфи</a>
           </li>
-          <li class="category-item"><a href="#">Экшн-камеры</a></li>
-          <li class="category-item"><a href="#">Фитнес-браслеты</a></li>
-          <li class="category-item"><a href="#">Умные часы</a></li>
-          <li class="category-item"><a href="#">Квадрокоптеры</a></li>
+          <li class="category-item category-cameras"><a href="#">Экшн-камеры</a></li>
+          <li class="category-item category-bracelets"><a href="#">Фитнес-браслеты</a></li>
+          <li class="category-item category-watches"><a href="#">Умные часы</a></li>
+          <li class="category-item category-quadcopters"><a href="#">Квадрокоптеры</a></li>
         </ul>
       </section>
-      <section class="container">
-        <h2 class="visually-hidden">Сервисы</h2>
-        <div class="flex-container">
-          <ul class="services-controls">
-            <li class="services-control"><button class="button button-small">Доставка</button></li>
-            <li class="services-control"><button class="button button-small">Гарантия</button></li>
-            <li class="services-control"><button class="button button-small">Кредит</button></li>
-          </ul>
-          <ul class="services-list">
-            <li class="services-item">
-              <h3 class="heading">Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </li>
-            <li class="services-item">
-              <h3 class="heading">Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-              Товар, не дом, конечно же.</p>
-            </li>
-            <li class="services-item">
-              <h3 class="heading">Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </li>
-          </ul>
+      <section class="services">
+        <div class="container">
+          <h2 class="visually-hidden">Сервисы</h2>
+          <div class="flex-container">
+            <ul class="services-controls">
+              <li class="services-control"><button class="button button-small active">Доставка</button></li>
+              <li class="services-control"><button class="button button-small">Гарантия</button></li>
+              <li class="services-control"><button class="button button-small">Кредит</button></li>
+            </ul>
+            <ul class="services-list">
+              <li class="services-item services-delivery active">
+                <h3 class="heading">Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </li>
+              <li class="services-item services-warranty">
+                <h3 class="heading">Гарантия</h3>
+                <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+                Товар, не дом, конечно же.</p>
+              </li>
+              <li class="services-item services-credit">
+                <h3 class="heading">Кредит</h3>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="fabricators container">
         <h2 class="visually-hidden">Производители</h2>
         <ul class="fabricators-list">
-          <li class="fabricators-item"><img src="img/logo-1.png" width="260" height="100" alt="Логотип dji"></li>
-          <li class="fabricators-item"><img src="img/logo-2.png" width="260" height="100" alt="Логотип SP Gadgets"></li>
-          <li class="fabricators-item"><img src="img/logo-3.png" width="260" height="100" alt="Логотип GoPro"></li>
-          <li class="fabricators-item"><img src="img/logo-4.png" width="260" height="100" alt="Логотип Vive"></li>
+          <li class="fabricators-item fabricators-dgi"><img src="img/logo-1.png" width="260" height="100" alt="Логотип dji"></li>
+          <li class="fabricators-item fabricators-spgadjets"><img src="img/logo-2.png" width="260" height="100" alt="Логотип SP Gadgets"></li>
+          <li class="fabricators-item fabricators-gopro"><img src="img/logo-3.png" width="260" height="100" alt="Логотип GoPro"></li>
+          <li class="fabricators-item fabricators-vive"><img src="img/logo-4.png" width="260" height="100" alt="Логотип Vive"></li>
         </ul>
       </section>
       <div class="container flex-container">

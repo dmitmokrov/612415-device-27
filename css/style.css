@@ -81,6 +81,7 @@ body {
 
 .button {
   position: relative;
+  z-index: 1;
   display: inline-block;
   width: 200px;
   border: none;
@@ -173,36 +174,6 @@ input[type="radio"].visually-hidden {
 
 .inner-page .nav {
   padding-bottom: 51px;
-}
-
-.nav::before {
-  content: "";
-  position: absolute;
-  bottom: 67px;
-  left: 600px;
-  width: 100px;
-  height: 7px;
-  background-color: #ffffff;
-}
-
-.nav::after {
-  content: "01";
-  position: absolute;
-  right: 47px;
-  bottom: -54px;
-
-  font-weight: 800;
-  font-size: 179px;
-  line-height: 179px;
-  letter-spacing: 1.79px;
-  font-family: "Gilroy", "Arial", sans-serif;
-
-  color: #ffffff;
-}
-
-.inner-page .nav::before,
-.inner-page .nav::after {
-  display: none;
 }
 
 .nav-columns {
@@ -365,20 +336,23 @@ input[type="radio"].visually-hidden {
   margin-right: 240px;
 }
 
+.nav-menu-catalog:hover .nav-submenu-list {
+  display: flex;
+}
+
 .nav-submenu-list {
   display: none;
   position: absolute;
   z-index: 1;
-  top: 45px;
+  top: 24px;
   left: -60px;
-  /* display: flex; */
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-start;
   width: 1160px;
-  height: 143px;
+  height: 164px;
   margin: 0;
-  padding: 0 60px 50px;
+  padding: 21px 60px 50px;
 
   background-color: #f7e296;
 
@@ -438,46 +412,110 @@ input[type="radio"].visually-hidden {
   transform: rotate(90deg);
 }
 
+.nav-link-catalog:hover + .nav-submenu-list {
+  display: flex;
+}
+
 /* Раздел "Лучшие предложения" */
 
+.best-offers {
+  position: relative;
+  margin-bottom: 78px;
+  padding-bottom: 35px;
+}
+
 .best-offers-list {
+  position: relative;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.best-offers-list::before {
+  content: "";
+  position: absolute;
+  top: -74px;
+  left: 600px;
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
+}
+
 .best-offer {
-  display: flex;
+  position: relative;
+  display: none;
   justify-content: space-between;
 }
 
-.best-offer-info {
-  width: 560px;
+.best-offer::before {
+  position: absolute;
+  right: 47px;
+  top: -125px;
+
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 179px;
+  letter-spacing: 1.79px;
+  font-family: "Gilroy", "Arial", sans-serif;
+
+  color: #ffffff;
 }
 
-.best-offer-image {
-  order: -1;
-  width: 560px;
+.best-offer-selfie-stick::before {
+  content: "01";
+}
 
-  text-align: center;
+.best-offer-fitness-bracelet::before {
+  content: "02";
+}
+
+.best-offer-quadcopter::before {
+  content: "03";
+}
+
+
+.best-offer.active {
+  display: flex;
+}
+
+.best-offer-info {
+  position: relative;
+  width: 560px;
 }
 
 .slider-slogan {
+  position: absolute;
+  top: -32px;
+
   line-height: 56px;
 }
 
 .slider-desc {
+  margin-top: 99px;
+  margin-bottom: 43px;
+
   letter-spacing: 0.15px;
 }
 
 .slider-table {
+  margin-top: 50px;
+  border: none;
+  border-collapse: collapse;
+
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.13px;
 }
 
-.slider-table-cell {
+.slider-table td {
+  padding: 0;
+}
+
+.slider-table .slider-table-cell {
+  width: 160px;
+  padding-bottom: 7px;
+
   font-size: 36px;
   line-height: 48px;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -485,8 +523,64 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.slider-table-cell:nth-child(2) {
+  width: 140px;
+}
+
+.best-offer-image {
+  position: relative;
+  order: -1;
+  width: 560px;
+}
+
+.best-offer-image img {
+  position: absolute;
+}
+
+.selfie-stick {
+  top: -111px;
+  left: 91px;
+}
+
+.fitness-bracelet {
+  top: -100px;
+  left: 116px;
+}
+
+.quadcopter {
+  top: -46px;
+  left: 32px;
+}
+
 .best-offers-controls {
+  position: absolute;
+  top: 206px;
+  right: 82px;
+  display: flex;
+  justify-content: space-between;
+  width: 78px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.slider-button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../img/slider-button-empty.svg");
+  background-size: 12px;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.slider-button.active {
+  background-image: url("../img/slider-button.svg");
 }
 
 /* Раздел "Категории товаров" */
@@ -515,23 +609,144 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.18px;
 }
 
-.category-list a {
+.category-item a {
+  position: relative;
+  display: block;
+  padding-top: 194px;
+
   text-decoration: none;
   color: #000000;
 }
 
-.category-list a:active {
+.category-item a::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 160px;
+  height: 160px;
+
+  background-color: #f7e296;
+}
+
+.category-item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 160px;
+  height: 160px;
+
+  background-repeat: no-repeat;
+}
+
+.category-item a:hover::before {
+  background-color: #f0c52e;
+}
+
+.category-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.category-item a:active::after {
   opacity: 0.3;
+}
+
+.category-virtual a::after {
+  background-image: url("../img/popular-1.svg");
+  background-position: left 31px top 53px;
+}
+
+.category-monopods a::after {
+  background-image: url("../img/popular-2.svg");
+  background-position: left 38px bottom 1px;
+}
+
+.category-cameras a::after {
+  background-image: url("../img/popular-3.svg");
+  background-position: left 49px top 39px;
+}
+
+.category-bracelets a::after {
+  background-image: url("../img/popular-4.svg");
+  background-position: left 28px top 51px;
+}
+
+.category-watches a::after {
+  background-image: url("../img/popular-5.svg");
+  background-position: left 55px top 33px;
+}
+
+.category-quadcopters a::after {
+  background-image: url("../img/popular-6.svg");
+  background-position: left 13px top 50px;
 }
 
 /* Раздел "Сервисы" */
 
+.services {
+  position: relative;
+  margin-bottom: 95px;
+  padding-top: 75px;
+  padding-bottom: 113px;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+
+  background-color: #e5e5e5;
+}
+
 .services-controls {
+  position: relative;
   width: 360px;
   margin: 0;
   padding: 0;
+  padding-top: 5px;
 
   list-style: none;
+}
+
+.services-controls::after {
+  content: "";
+  position: absolute;
+  top: -74px;
+  right: 76px;
+  width: 7px;
+  height: 319px;
+
+  background-color: #000000;
+}
+
+.services-control {
+  margin-bottom: 25px;
+}
+
+.services-control button {
+  position: relative;
+}
+
+.services-control button.active,
+.services-control button:active {
+  color: #f7e184;
+}
+
+.services-control button.active::before,
+.services-control button:active::before {
+  top: 0;
+  width: 280px;
+  height: 40px;
+
+  background-color: #000000;
 }
 
 .services-list {
@@ -542,6 +757,15 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.services-item {
+  position: relative;
+  display: none;
+}
+
+.services-item.active {
+  display: block;
+}
+
 .services-item h3 {
   margin: 0;
   margin-bottom: 30px;
@@ -549,10 +773,47 @@ input[type="radio"].visually-hidden {
 }
 
 .services-item p {
+  width: 460px;
+
   letter-spacing: 0.15px;
 }
 
+.services-item::after {
+  content: "";
+  position: absolute;
+
+  background-repeat: no-repeat;
+}
+
+.services-delivery::after {
+  top: 11px;
+  right: 65px;
+  width: 136px;
+  height: 164px;
+  background-image: url("../img/delivery.svg");
+}
+
+.services-warranty::after {
+  top: -13px;
+  right: 46px;
+  width: 171px;
+  height: 194px;
+  background-image: url("../img/warranty.svg");
+}
+
+.services-credit::after {
+  top: -13px;
+  right: 70px;
+  width: 156px;
+  height: 186px;
+  background-image: url("../img/credit.svg");
+}
+
 /* Раздел "Производители" */
+
+.fabricators {
+  margin-bottom: 84px;
+}
 
 .fabricators-list {
   display: flex;
@@ -565,7 +826,38 @@ input[type="radio"].visually-hidden {
 }
 
 .fabricators-item {
+  position: relative;
   width: 260px;
+}
+
+.fabricators-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.fabricators-dgi::before {
+  background-image: url("../img/logo-1-color.png");
+}
+
+.fabricators-spgadjets::before {
+  background-image: url("../img/logo-2-color.png");
+}
+
+.fabricators-gopro::before {
+  background-image: url("../img/logo-3-color.png");
+}
+
+.fabricators-vive::before {
+  background-image: url("../img/logo-4-color.png");
+}
+
+.fabricators-item:hover::before {
+  opacity: 1;
 }
 
 /* Раздел "О нас"  */
@@ -573,8 +865,8 @@ input[type="radio"].visually-hidden {
 .about-us {
   position: relative;
   width: 480px;
-  padding-top: 60px;
-  padding-bottom: 90px;
+  padding-top: 52px;
+  padding-bottom: 82px;
 }
 
 .about-us::before {
@@ -590,7 +882,7 @@ input[type="radio"].visually-hidden {
 
 .about-us h2 {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 43px;
 }
 
 .about-us p {
@@ -599,7 +891,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us-list {
-  margin: 70px 0 60px;
+  margin: 65px 0 55px;
   padding: 0;
 
   list-style: none;
@@ -632,8 +924,8 @@ input[type="radio"].visually-hidden {
 .contacts {
   position: relative;
   width: 560px;
-  padding-top: 60px;
-  padding-bottom: 90px;
+  padding-top: 52px;
+  padding-bottom: 82px;
 }
 
 .contacts::before {
@@ -649,7 +941,7 @@ input[type="radio"].visually-hidden {
 
 .contacts h2 {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 43px;
 }
 
 .contacts p {
@@ -660,7 +952,7 @@ input[type="radio"].visually-hidden {
 .contacts-map {
   display: block;
   height: 222px;
-  margin-bottom: 73px;
+  margin-bottom: 68px;
 }
 
 /* Стили футера */
@@ -672,7 +964,7 @@ input[type="radio"].visually-hidden {
 .footer-container {
   position: relative;
 
-  padding: 60px 0;
+  padding: 65px 0 67px;
 }
 
 .footer-container::before {
@@ -688,7 +980,7 @@ input[type="radio"].visually-hidden {
 
 .footer-menu {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-logo {
@@ -724,7 +1016,6 @@ input[type="radio"].visually-hidden {
 .footer-menu-link::before {
   content: "";
   position: absolute;
-  left: 0;
   bottom: 9px;
   display: block;
 
@@ -732,6 +1023,7 @@ input[type="radio"].visually-hidden {
 }
 
 .login-footer::before {
+  left: 1px;
   width: 13px;
   height: 12px;
 
@@ -746,6 +1038,7 @@ input[type="radio"].visually-hidden {
 }
 
 .compare-footer::before {
+  left: 6px;
   width: 10px;
   height: 10px;
 
@@ -753,6 +1046,7 @@ input[type="radio"].visually-hidden {
 }
 
 .cart-footer::before {
+  left: 2px;
   width: 12px;
   height: 12px;
 
@@ -779,8 +1073,8 @@ input[type="radio"].visually-hidden {
 
 .footer-info {
   display: flex;
-  align-items: center;
-  margin-top: 35px;
+  align-items: flex-start;
+  margin-top: 30px;
 
   color: #ffffff;
 }
@@ -796,6 +1090,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   width: 440px;
   margin: 0;
+  margin-top: 7px;
   padding: 0;
 
   list-style: none;
@@ -803,6 +1098,7 @@ input[type="radio"].visually-hidden {
 
 .footer-link {
   display: block;
+  padding: 0 6px;
 
   font-weight: 800;
   font-size: 18px;
@@ -877,6 +1173,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   width: 141px;
   margin: 0;
+  margin-top: 2px;
   margin-right: 483px;
   padding: 0;
 
