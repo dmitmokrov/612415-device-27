@@ -1819,6 +1819,7 @@ input[type="radio"]:disabled + .radio-label {
 
 .modal {
   position: fixed;
+  z-index: 10;
   top: 50%;
   left: 50%;
   width: 960px;
@@ -1838,11 +1839,20 @@ input[type="radio"]:disabled + .radio-label {
   border: none;
   border-radius: 50%;
 
+  background-color: #ffffff;
   background-image: url("../img/modal-close.svg");
   background-repeat: no-repeat;
   opacity: 0.5;
 
   cursor: pointer;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
 }
 
 .modal-contact {
@@ -1884,8 +1894,8 @@ input[type="radio"]:disabled + .radio-label {
 .contact-name input,
 .contact-email input {
   height: 50px;
-  border: none;
-  padding: 10px 20px;
+  border: 3px solid transparent;
+  padding: 7px 17px;
 
   font-weight: 400;
   font-size: 14px;
@@ -1896,14 +1906,42 @@ input[type="radio"]:disabled + .radio-label {
   background-color: #f2f2f2;
 }
 
+.contact-name input:hover,
+.contact-email input:hover,
+.contact-text textarea:hover {
+  background-color: #eaeaea;
+}
+
+.contact-name input:focus,
+.contact-email input:focus,
+.contact-text textarea:focus {
+  outline: none;
+  border-color:#f0c52e;
+  color: #464646;
+  background-color: #ffffff;
+}
+
+.contact-name input:focus::placeholder,
+.contact-email input:focus::placeholder {
+  color: #464646;
+}
+
+.contact-name input:invalid,
+.contact-email input:invalid,
+.contact-text textarea:invalid {
+  border-color: transparent;
+  color: rgba(70, 70, 70, 0.4);
+  background-color: #f6dada;
+}
+
 .contact-text {
   width: 100%;
 }
 
 .contact-text textarea {
   min-height: 156px;
-  border: none;
-  padding: 10px 20px;
+  border: 3px solid transparent;
+  padding: 7px 17px;
 
   font-weight: 400;
   font-size: 14px;
