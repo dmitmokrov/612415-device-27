@@ -1319,18 +1319,8 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
 }
 
-.filter-form fieldset::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  display: block;
-  width: 201px;
-  height: 2px;
-
-  background-color: #000000;
-}
-
 .filter-form legend {
+  position: relative;
   margin-bottom: 25px;
 
   font-weight: 800;
@@ -1339,6 +1329,17 @@ input[type="radio"].visually-hidden {
   font-family: "Gilroy", "Arial", sans-serif;
   letter-spacing: 0.18px;
   color: #000000;
+}
+
+.filter-form legend::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  display: block;
+  width: 201px;
+  height: 2px;
+
+  background-color: #000000;
 }
 
 .filter-form ul {
@@ -1818,6 +1819,7 @@ input[type="radio"]:disabled + .radio-label {
 /* Модальные окна */
 
 .modal {
+  display: none;
   position: fixed;
   z-index: 10;
   top: 50%;
@@ -1828,6 +1830,22 @@ input[type="radio"]:disabled + .radio-label {
 
   background-color: #ffffff;
   box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-show {
+  display: block;
+  animation-name: modal-animation;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+@keyframes modal-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal-close {
@@ -1856,7 +1874,6 @@ input[type="radio"]:disabled + .radio-label {
 }
 
 .modal-contact {
-  display: none;
   padding: 80px 100px;
 }
 
@@ -1955,6 +1972,5 @@ input[type="radio"]:disabled + .radio-label {
 }
 
 .modal-map {
-  display: none;
   height: 559px;
 }
