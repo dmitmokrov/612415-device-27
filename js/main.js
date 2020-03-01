@@ -23,13 +23,12 @@ try {
 contactButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalContact.classList.add('modal-show');
-  contactName.focus();
   if (name && email) {
     contactName.value = name;
     contactEmail.value = email;
     contactText.focus();
   } else {
-    contactEmail.focus();
+    contactName.focus();
   }
 });
 

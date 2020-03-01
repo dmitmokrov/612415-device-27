@@ -1850,6 +1850,7 @@ input[type="radio"]:disabled + .radio-label {
 
 .modal-close {
   position: absolute;
+  z-index: 5;
   top: 22px;
   right: 22px;
   width: 55px;
@@ -1974,3 +1975,15 @@ input[type="radio"]:disabled + .radio-label {
 .modal-map {
   height: 559px;
 }
+
+.modal-map img {
+  position: absolute;
+  z-index: 1;
+}
+
+.modal-map iframe {
+  position: absolute;
+  z-index: 2;
+}
+
+
