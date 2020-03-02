@@ -8,9 +8,36 @@ var contactEmail = modalContact.querySelector('#contact-email');
 var contactText = modalContact.querySelector('#contact-letter');
 var contactsMap = document.querySelector('.contacts-map');
 var modalMap = document.querySelector('.modal-map');
+var slides = document.querySelectorAll('.best-offer');
+var slidesControls = document.querySelectorAll('.slider-button');
+var services = document.querySelectorAll('.services-item');
+var servicesControls = document.querySelectorAll('.services-control button');
 var isStorageSupport = true;
 var name = '';
 var email = '';
+
+// Слайдер с лучшими предложениями
+
+for (let i = 0; i < slides.length; i++) {
+  slidesControls[i].addEventListener('click', function () {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slidesControls.forEach(control => control.classList.remove('active'));
+    slides[i].classList.add('active');
+    this.classList.add('active');
+  });
+}
+
+// Слайдер "Сервисы"
+
+for (let i = 0; i < services.length; i++) {
+    servicesControls[i].addEventListener('click', function () {
+    services.forEach(service => service.classList.remove('active'));
+    servicesControls.forEach(control => control.classList.remove('active'));
+    services[i].classList.add('active');
+    this.classList.add('active');
+  });
+}
+
 
 try {
   name = localStorage.getItem('name');
