@@ -18,26 +18,38 @@ var email = '';
 
 // Слайдер с лучшими предложениями
 
-for (let i = 0; i < slides.length; i++) {
-  slidesControls[i].addEventListener('click', function () {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slidesControls.forEach(control => control.classList.remove('active'));
-    slides[i].classList.add('active');
-    this.classList.add('active');
-  });
+for (var i = 0; i < slides.length; i++) {
+  slidesControls[i].addEventListener('click', function (i_local) {
+
+    return function () {
+      for (var j = 0; j < slides.length; j++) {
+        slides[j].classList.remove('active');
+        slidesControls[j].classList.remove('active');
+      }
+
+      slides[i_local].classList.add('active');
+      this.classList.add('active');
+    };
+
+  }(i));
 }
 
 // Слайдер "Сервисы"
 
-for (let i = 0; i < services.length; i++) {
-    servicesControls[i].addEventListener('click', function () {
-    services.forEach(service => service.classList.remove('active'));
-    servicesControls.forEach(control => control.classList.remove('active'));
-    services[i].classList.add('active');
-    this.classList.add('active');
-  });
-}
+for (var i = 0; i < services.length; i++) {
+    servicesControls[i].addEventListener('click', function (i_local) {
+    return function () {
+      for (var j = 0; j < services.length; j++) {
+        services[j].classList.remove('active');
+        servicesControls[j].classList.remove('active');
+      }
 
+      services[i_local].classList.add('active');
+      this.classList.add('active');
+    };
+
+  }(i));
+}
 
 try {
   name = localStorage.getItem('name');
@@ -60,18 +72,22 @@ contactButton.addEventListener('click', function (evt) {
 });
 
 //  Закрытие модального окна по крестику
-modalClose.forEach(elem => elem.addEventListener('click', function () {
-  this.parentNode.classList.remove('modal-show');
-}));
+
+for (var k = 0; k < modalClose.length; k++) {
+  modalClose[k].addEventListener('click', function () {
+    this.parentNode.classList.remove('modal-show');
+  });
+}
 
 //  Закрытие модального окна по клавише Escape
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    modals.forEach(elem => {
-      if (elem.classList.contains('modal-show')) {
+    for (var l = 0; l < modals.length; l++) {
+      if (modals[l].classList.contains('modal-show')) {
         evt.preventDefault();
-        elem.classList.remove('modal-show');
-      }})
+        modals[l].classList.remove('modal-show');
+      }
+    }
   }
 });
 
@@ -94,4 +110,6 @@ contactsMap.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalMap.classList.add('modal-show');
 });
+
+
 
