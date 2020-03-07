@@ -83,6 +83,7 @@ body {
   position: relative;
   z-index: 1;
   display: inline-block;
+  vertical-align: top;
   width: 200px;
   border: none;
   padding: 8px;
@@ -353,10 +354,9 @@ input[type="radio"].visually-hidden {
   top: 24px;
   left: -60px;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-content: flex-start;
   width: 1160px;
-  height: 164px;
+
+  min-height: 164px;
   margin: 0;
   padding: 21px 60px 35px;
 
@@ -365,17 +365,22 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.nav-submenu-list li {
-  width: 200px;
-  min-height: 35px;
+.nav-submenu-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.nav-submenu-list li:nth-child(-n + 3) {
+.nav-submenu-list li {
+  width: 200px;
+}
+
+.nav-submenu-list > li:first-child {
   margin-right: 40px;
 }
 
-.wrap-next {
-  margin-bottom: 30px;
+.nav-submenu-list a {
+  padding: 3px 0;
 }
 
 .nav-menu-delivery {
@@ -561,7 +566,8 @@ input[type="radio"].visually-hidden {
 
 .best-offers-controls {
   position: absolute;
-  top: 206px;
+  /* top: 206px; */
+  bottom: 167px;
   right: 82px;
   display: flex;
   justify-content: space-between;
@@ -574,6 +580,7 @@ input[type="radio"].visually-hidden {
 
 .slider-button {
   display: inline-block;
+  vertical-align: middle;
   width: 12px;
   height: 12px;
   border: none;
@@ -727,9 +734,9 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: -74px;
+  bottom: -45px;
   right: 76px;
   width: 7px;
-  height: 319px;
 
   background-color: #000000;
 }
@@ -1094,6 +1101,7 @@ input[type="radio"].visually-hidden {
 
 .footer-links-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 440px;
   margin: 0;
@@ -1477,15 +1485,15 @@ input[type="radio"].visually-hidden {
   opacity: 0.6;
 }
 
-input[type="checkbox"]:checked + .checkbox-label::before {
+.filter-form input[type="checkbox"]:checked + .checkbox-label::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
-input[type="checkbox"]:checked + .checkbox-label:active::before {
+.filter-form input[type="checkbox"]:checked + .checkbox-label:active::before {
   background-image: url("../img/checkbox-off.svg");
 }
 
-input[type="checkbox"]:not(:checked) + .checkbox-label:active::before {
+.filter-form input[type="checkbox"]:not(:checked) + .checkbox-label:active::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
@@ -1501,21 +1509,21 @@ input[type="checkbox"]:not(:checked) + .checkbox-label:active::before {
   background-repeat: no-repeat;
 }
 
-input[type="radio"]:checked + .radio-label::before {
+.filter-form input[type="radio"]:checked + .radio-label::before {
   background-image: url("../img/radio-on.svg");
 }
 
-input[type="radio"]:checked + .radio-label:active::before {
+.filter-form input[type="radio"]:checked + .radio-label:active::before {
   background-image: url("../img/radio-off.svg");
 }
 
-input[type="radio"]:not(:checked) + .radio-label:active::before {
+.filter-form input[type="radio"]:not(:checked) + .radio-label:active::before {
   background-image: url("../img/radio-on.svg");
 }
 
 
-input[type="checkbox"]:disabled + .checkbox-label,
-input[type="radio"]:disabled + .radio-label {
+.filter-form input[type="checkbox"]:disabled + .checkbox-label,
+.filter-form input[type="radio"]:disabled + .radio-label {
   opacity: 0.25;
 }
 
@@ -1550,7 +1558,7 @@ input[type="radio"]:disabled + .radio-label {
   z-index: 1;
   display: flex;
   align-items: center;
-  margin: 0;
+  min-height: 70px;
   margin-bottom: 70px;
   padding: 10px 0;
 
@@ -1561,6 +1569,22 @@ input[type="radio"]:disabled + .radio-label {
   letter-spacing: 3.2px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.products-sorting span {
+  margin-right: 40px;
+}
+
+.products-sorting ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.products-sorting ul:last-child {
+  margin-left: auto;
 }
 
 .products-sorting a {
@@ -1576,10 +1600,6 @@ input[type="radio"]:disabled + .radio-label {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.products-sorting a:first-child {
-  margin-left: 40px;
-}
-
 .products-sorting a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -1592,19 +1612,15 @@ input[type="radio"]:disabled + .radio-label {
   color: #000000;
 }
 
-.products-sorting a:nth-last-child(2) {
-  margin-left: auto;
-  margin-right: 19px;
+.sorting-list {
+  flex-wrap: wrap;
 }
 
-.products-sorting a:nth-last-child(2),
-.products-sorting a:last-child {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.sort-link {
+.sorting-up-down-list a {
+  display: block;
   width: 11px;
+  margin-left: 19px;
+  padding: 12px 0;
 
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
@@ -1731,6 +1747,7 @@ input[type="radio"]:disabled + .radio-label {
 .product-image:hover .button,
 .product-image:hover .button-compare {
   display: inline-block;
+  vertical-align: top;
 }
 
 .button-compare {
@@ -1825,8 +1842,7 @@ input[type="radio"]:disabled + .radio-label {
   top: 50%;
   left: 50%;
   width: 960px;
-
-  transform: translate(-50%, -50%);
+  margin-left: -480px;
 
   background-color: #ffffff;
   box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -1836,15 +1852,46 @@ input[type="radio"]:disabled + .radio-label {
   display: block;
   animation-name: modal-animation;
   animation-duration: 0.3s;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
 }
 
 @keyframes modal-animation {
   0% {
     opacity: 0;
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(20px);
+  }
+
+  20%,
+  40%,
+  50%,
+  60%,
+  80% {
+    transform: translateX(-20px);
   }
 }
 
@@ -1875,6 +1922,7 @@ input[type="radio"]:disabled + .radio-label {
 }
 
 .modal-contact {
+  margin-top: -272px;
   padding: 80px 100px;
 }
 
@@ -1974,6 +2022,7 @@ input[type="radio"]:disabled + .radio-label {
 
 .modal-map {
   height: 559px;
+  margin-top: -279px;
 }
 
 .modal-map img {
@@ -1984,6 +2033,7 @@ input[type="radio"]:disabled + .radio-label {
 .modal-map iframe {
   position: absolute;
   z-index: 2;
+  border: 0;
 }
 
 

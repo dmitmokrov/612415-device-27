@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Магазин «Device»</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="inner-page">
     <header class="header">
@@ -30,12 +30,24 @@
           <li class="nav-menu-catalog">
             <a class="nav-link nav-link-catalog" href="catalog.html">Каталог товаров</a>
             <ul class="nav-submenu-list">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li class="wrap-next"><a href="#">Умные часы</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
+              <li>
+                <ul>
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="#">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="nav-menu-item nav-menu-delivery"><a class="nav-link" href="delivery.html">Доставка</a></li>
@@ -117,14 +129,22 @@
         <section class="products">
           <div class="products-wrapper">
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
-            <p class="products-sorting">
-              Сортировка:
-              <a class="active">По цене</a>
-              <a href="#">По типу</a>
-              <a href="#">По популярности</a>
-              <a class="sort-link" href="#"><span class="visually-hidden">По возрастанию</span></a>
-              <a class="sort-link sort-descending active"><span class="visually-hidden">По убыванию</span></a>
-            </p>
+            <div class="products-sorting">
+              <span>Сортировка:</span>
+              <ul class="sorting-list">
+                <li><a class="active">По цене</a></li>
+                <li><a href="#">По типу</a></li>
+                <li><a href="#">По популярности</a></li>
+              </ul>
+              <ul class="sorting-up-down-list">
+                <li>
+                  <a class="sort-link" href="#"><span class="visually-hidden">По возрастанию</span></a>
+                </li>
+                <li>
+                  <a class="sort-link sort-descending active"><span class="visually-hidden">По убыванию</span></a>
+                </li>
+              </ul>
+            </div>
             <ul class="products-list">
               <li class="products-item">
                 <div class="products-info">

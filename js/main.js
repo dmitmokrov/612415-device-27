@@ -34,7 +34,7 @@ for (var i = 0; i < slides.length; i++) {
   }(i));
 }
 
-// Слайдер "Сервисы"
+// Слайдер 'Сервисы'
 
 for (var i = 0; i < services.length; i++) {
     servicesControls[i].addEventListener('click', function (i_local) {
@@ -58,7 +58,7 @@ try {
   isStorageSupport = false;
 }
 
-// Открытие модального окна "Напишите нам"
+// Открытие модального окна 'Напишите нам'
 contactButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalContact.classList.add('modal-show');
@@ -76,6 +76,7 @@ contactButton.addEventListener('click', function (evt) {
 for (var k = 0; k < modalClose.length; k++) {
   modalClose[k].addEventListener('click', function () {
     this.parentNode.classList.remove('modal-show');
+    this.parentNode.classList.remove('modal-error');
   });
 }
 
@@ -86,6 +87,7 @@ window.addEventListener('keydown', function (evt) {
       if (modals[l].classList.contains('modal-show')) {
         evt.preventDefault();
         modals[l].classList.remove('modal-show');
+        modals[l].classList.remove('modal-error');
       }
     }
   }
@@ -94,8 +96,11 @@ window.addEventListener('keydown', function (evt) {
 // Отправка формы
 
 form.addEventListener('submit', function (evt) {
-  if (!contactName.value || !contactEmail.value || !contactText.textContent) {
+  if (!contactName.value || !contactEmail.value || !contactText.value) {
     evt.preventDefault();
+    modalContact.classList.remove('modal-error');
+    modalContact.offsetWidth = modalContact.offsetWidth;
+    modalContact.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
       localStorage.setItem('name', contactName.value);
@@ -104,7 +109,7 @@ form.addEventListener('submit', function (evt) {
   }
 });
 
-// Открытие модального окна "Мы на карте"
+// Открытие модального окна 'Мы на карте'
 
 contactsMap.addEventListener('click', function (evt) {
   evt.preventDefault();

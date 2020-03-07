@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Магазин «Device»</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -29,12 +29,24 @@
           <li class="nav-menu-catalog">
             <a class="nav-link nav-link-catalog" href="catalog.html">Каталог товаров</a>
             <ul class="nav-submenu-list">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li class="wrap-next"><a href="#">Умные часы</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
+              <li>
+                <ul>
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="#">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="nav-menu-item nav-menu-delivery"><a class="nav-link" href="delivery.html">Доставка</a></li>
@@ -239,15 +251,15 @@
       <form class="contact-form">
         <p class="contact-name">
           <label for="contact-name">Ваше имя:</label>
-          <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия" required>
+          <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия">
         </p>
         <p class="contact-email">
           <label for="contact-email">Ваш e-mail:</label>
-          <input type="email" name="email" id="contact-email" placeholder="email@example.com" required>
+          <input type="email" name="email" id="contact-email" placeholder="email@example.com">
         </p>
         <p class="contact-text">
           <label for="contact-letter">Текст письма:</label>
-          <textarea name="letter" id="contact-letter" required>В свободной форме</textarea>
+          <textarea name="letter" id="contact-letter">В свободной форме</textarea>
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>
@@ -255,11 +267,11 @@
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Мы на карте</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.2802402364284!2d29.979663516101294!3d60.043583381914445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696494cfe1fca87%3A0x9b197f27d599b190!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQk9C-0YDRgdC60LDRjywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzcwMQ!5e0!3m2!1sru!2sru!4v1583088505531!5m2!1sru!2sru" width="960" height="559" frameborder="0" style="border:0;" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1992.2802402364284!2d29.979663516101294!3d60.043583381914445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696494cfe1fca87%3A0x9b197f27d599b190!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQk9C-0YDRgdC60LDRjywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzcwMQ!5e0!3m2!1sru!2sru!4v1583088505531!5m2!1sru!2sru" width="960" height="559" allowfullscreen></iframe>
       <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес: ул. Строителей, д. 15">
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
